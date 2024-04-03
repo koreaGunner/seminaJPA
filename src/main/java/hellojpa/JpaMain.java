@@ -17,11 +17,18 @@ public class JpaMain {
         try {
             //1. insert
 //            Member member = new Member();
-//            member.setId(2L);
+//            member.setId(4L);
 //            member.setName("AAA");
 //            System.out.println("=========");
 //            em.persist(member);
 //            System.out.println("=========");
+
+            //1-1
+//            Member member1 = new Member();
+//            member1.setId(5L);
+//            member1.setName("CCC");
+//            em.persist(member);
+//            em.persist(member1);
 
             //2. select
 //            Member member = em.find(Member.class, 1L);
@@ -50,6 +57,12 @@ public class JpaMain {
 //            for (Member member : result) {
 //                System.out.println("member.getName() = " + member.getName());
 //            }
+            
+            //6. 동일성 보장
+//            Member member = em.find(Member.class, 1L);
+//            Member member1 = em.find(Member.class, 1L);
+//
+//            System.out.println(member == member1);
 
             tx.commit();
         } catch(Exception e) {
